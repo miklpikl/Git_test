@@ -1,7 +1,3 @@
-/Debug
-/Generated_Code
-/Documentation
-/Static_Code
 *~
 *.g_c
 *.g_x
@@ -9,3 +5,8 @@
 *_Settings.previous.xml
 *_Settings.xml
 ProjectInfo.xml
+/Debug
+/Generated_Code
+/Documentation
+/Static_Code
+/.settings
