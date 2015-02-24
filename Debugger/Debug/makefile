@@ -52,7 +52,7 @@ all: Debugger.elf secondary-outputs
 Debugger.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross ARM C++ Linker'
-	arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/micke_000/workspace.kds/Debugger/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/micke_000/workspace.kds/Debugger/Project_Settings/Linker_Files" -Wl,-Map,"Debugger.map" -nanolibc -o "Debugger.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/micke_000/Documents/Git_test/Debugger/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/micke_000/Documents/Git_test/Debugger/Project_Settings/Linker_Files" -Wl,-Map,"Debugger.map" -nanolibc -o "Debugger.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

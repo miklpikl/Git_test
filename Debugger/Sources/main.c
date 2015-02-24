@@ -30,6 +30,11 @@
 /* Including needed modules to compile this module/procedure */
 #include "Cpu.h"
 #include "Events.h"
+#include "Bit1.h"
+#include "BitIoLdd1.h"
+#include "Bit2.h"
+#include "BitIoLdd2.h"
+#include "WAIT1.h"
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"
@@ -48,7 +53,19 @@ int main(void)
   /*** End of Processor Expert internal initialization.                    ***/
 
   /* Write your code here */
-  /* For example: for(;;) { } */
+  /* For example: f
+   * or(;;) { } */
+ while(1)
+ {
+	 WAIT1_Waitms(500);
+	 Bit1_SetVal();
+	 WAIT1_Waitms(500);
+	 Bit1_ClrVal();
+	 WAIT1_Waitms(500);
+     Bit2_SetVal();
+	 WAIT1_Waitms(500);
+	 Bit2_ClrVal();
+ }
 
   /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
   /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
